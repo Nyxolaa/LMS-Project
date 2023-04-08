@@ -1,0 +1,150 @@
+﻿@model FilterMedia
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Medyalar</h1>
+
+<style>
+    .col-6 {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-6 label {
+        margin-bottom: 15px;
+    }
+
+</style>
+
+<div>
+    <div>
+        <a asp-action="Create">Yeni</a>
+    </div>
+    <div>
+        
+    </div>
+</div>
+
+<form asp-action="Search">
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="CategoryId">Medya Kategorisi</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.CategoryList"></select>
+        </div>
+        <div class="col-6">
+            <label asp-for="MTypeId">Medya Türü</label>
+            <select asp-for="MTypeId" asp-items="ViewBag.MediaTypeList"></select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Title">Başlık</label>
+            <input asp-for="Title" />
+        </div>
+        <div class="col-6">
+            <label asp-for="FileName">Dosya Adı</label>
+            <input asp-for="FileName" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="IsArchive">Arşivli</label>
+            <select asp-for="IsArchive">
+                <option value="N">Aktif Kayıtlar</option>
+                <option value="Y">Arşivli Kayıtlar</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary">
+                Ara
+            </button>
+        </div>
+    </div>
+</form>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Önizleme
+            </th>
+            <th>
+                Medya Türü
+            </th>
+            <th>
+                Medya Kategorisi
+            </th>
+            <th>
+                Başlık
+            </th>
+            <th>
+                Dosya Adı
+            </th>
+            <th>
+                Dosya Boyutu
+            </th>
+            <th>
+                Süre
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (IEnumerable<Media>) ViewBag.Medias) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @if (item.MTypeId == 1)
+                    {
+                        <img src="https://cdn-icons-png.flaticon.com/512/10297/10297001.png" style="width: 40px; height: 40px" alt="Video" />
+                    }
+                    else if (item.MTypeId == 2)
+                    {
+                        <img src="https://cdn-icons-png.flaticon.com/512/2625/2625053.png" style="width: 40px; height: 40px" alt="Podcast" />
+                    }
+                    else
+                    {
+                        @Html.DisplayName("C");
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MType.TypeName)
+                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileSizeHuman)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+               <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

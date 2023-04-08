@@ -1,0 +1,78 @@
+﻿@model LMS_Project_mvc.Models.Media
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<div>
+    <a asp-action="Index">GERİ DÖN</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Delete" asp-route-id="@Model?.Id">Delete</a> |
+   
+</div>
+<div>
+    <h4>Media</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MType.TypeName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FileSize)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FileSize)
+        </dd>
+        <dt class = "col-sm-2">
+            Önizleme
+        </dt>
+        <dd class = "col-sm-10">
+            @if (Model.MTypeId == 1)
+            {
+                <video width="320" height="240" controls>
+                     <source src="http://localhost:5004/@Model.FilePath" type="video/mp4">
+                </video>
+            }else if (Model.MTypeId == 2)
+            {
+                <audio controls>
+                    <source src="http://localhost:5004/@Model.FilePath" type="audio/mpeg">
+                </audio>
+            }
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Time)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Time)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+        </dd>
+        </dd>
+    </dl>
+</div>
+
