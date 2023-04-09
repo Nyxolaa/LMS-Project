@@ -10555,11 +10555,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project-mvc\\LMS-Project-mvc\\LMS-Project-mvc.csproj",
+      "projectUniqueName": "D:\\GithubProjects\\LMS-Project\\LMS-Project-mvc\\LMS-Project-mvc.csproj",
       "projectName": "LMS-Project-mvc",
-      "projectPath": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project-mvc\\LMS-Project-mvc\\LMS-Project-mvc.csproj",
+      "projectPath": "D:\\GithubProjects\\LMS-Project\\LMS-Project-mvc\\LMS-Project-mvc.csproj",
       "packagesPath": "C:\\Users\\Bilg\\.nuget\\packages\\",
-      "outputPath": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project-mvc\\LMS-Project-mvc\\obj\\",
+      "outputPath": "D:\\GithubProjects\\LMS-Project\\LMS-Project-mvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
