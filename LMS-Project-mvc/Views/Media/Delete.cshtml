@@ -4,54 +4,48 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<h1>Sil</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Bu medyayı silmek istediğinize emin misiniz?</h3>
 <div>
-    <h4>Media</h4>
+    <h4>Medya</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+            Başlık
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FileName)
+            Dosya Adı
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FileName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FileSize)
+            Boyut
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FileSize)
+            @Html.DisplayFor(model => model.FileSizeHuman)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Time)
+            Süre
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Time)
+            @Html.DisplayFor(model => model.Time) dk
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            Açıklama
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FilePath)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FilePath)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
         <a asp-action="Index">GERİ DÖN</a>
     </form>
 </div>

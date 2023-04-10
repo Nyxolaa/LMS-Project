@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LMS_Project_mvc
 build_property.RootNamespace = LMS_Project_mvc
-build_property.ProjectDir = D:\GithubProjects\LMS-Project\LMS-Project-mvc\
+build_property.ProjectDir = X:\Fairu\Phi-Corparate-Project\LMS-Project\LMS-Project-mvc\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GithubProjects\LMS-Project\LMS-Project-mvc
+build_property.MSBuildProjectDirectory = X:\Fairu\Phi-Corparate-Project\LMS-Project\LMS-Project-mvc
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Home/Index.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Home/Privacy.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Media/Create.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Media/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Media/Delete.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Media/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWFcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Media/Details.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Media/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWFcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Media/Edit.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Media/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWFcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Media/Index.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Media/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Shared/Error.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/_ViewImports.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/_ViewStart.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GithubProjects/LMS-Project/LMS-Project-mvc/Views/Shared/_Layout.cshtml]
+[X:/Fairu/Phi-Corparate-Project/LMS-Project/LMS-Project-mvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8mg9qpoiqi

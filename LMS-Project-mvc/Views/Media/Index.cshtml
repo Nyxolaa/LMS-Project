@@ -118,7 +118,7 @@
                     }
                     else
                     {
-                        @Html.DisplayName("C");
+                        @Html.DisplayName(" P ");
                     }
                 </td>
                 <td>
@@ -137,12 +137,12 @@
                     @Html.DisplayFor(modelItem => item.FileSizeHuman)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Time)
+                    @Html.DisplayFor(modelItem => item.Time) dk
                 </td>
                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detay Gör</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
                 </td>
             </tr>
         }

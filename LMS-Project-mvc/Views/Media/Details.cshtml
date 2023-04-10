@@ -4,46 +4,46 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detaylar</h1>
 <div>
     <a asp-action="Index">GERİ DÖN</a> |
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Delete" asp-route-id="@Model?.Id">Delete</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Düzenle</a> |
+    <a asp-action="Delete" asp-route-id="@Model?.Id">Sil</a> |
    
 </div>
 <div>
-    <h4>Media</h4>
+    <h4>Medya</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.MType)
+            Medya Türü
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.MType.TypeName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
+            Kategori
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+            Başlık
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FileName)
+            Dosya Adı
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FileName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FileSize)
+            Boyut
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FileSize)
+            @Html.DisplayFor(model => model.FileSizeHuman)
         </dd>
         <dt class = "col-sm-2">
             Önizleme
@@ -61,13 +61,13 @@
                 </audio>
             }
         <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Time)
+                Süre
         </dt>
         <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Time)
+                @Html.DisplayFor(model => model.Time) dk
         </dd>
         <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Description)
+                Açıklama
         </dt>
         <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Description)
