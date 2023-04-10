@@ -1,0 +1,53 @@
+﻿@model LMS_Project_mvc.Models.Media
+
+@{
+    ViewData["Title"] = "Archive";
+}
+
+<h1>Arşivle</h1>
+<br />
+<h5>Arşivlenen kayıtlar, listelerde görüntülenmezler.</h5>
+<h3>Bu medyayı Arşivlemek istediğinize emin misiniz?</h3>
+<br />
+<div>
+    <h4>Medya</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Başlık
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            Dosya Adı
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dt class="col-sm-2">
+            Boyut
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FileSizeHuman)
+        </dd>
+        <dt class="col-sm-2">
+            Süre
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Time) dk
+        </dd>
+        <dt class="col-sm-2">
+            Açıklama
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+
+    <form asp-action="Archive">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Arşivle" class="btn btn-danger" /> |
+        <a asp-action="Index">İptal et ve geri dön</a>
+    </form>
+</div>

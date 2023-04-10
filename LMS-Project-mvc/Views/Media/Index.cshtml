@@ -16,15 +16,11 @@
     .col-6 label {
         margin-bottom: 15px;
     }
-
 </style>
 
 <div>
     <div>
-        <a asp-action="Create">Yeni</a>
-    </div>
-    <div>
-        
+        <a asp-action="Create">Yeni Medya Ekle</a>
     </div>
 </div>
 
@@ -42,33 +38,34 @@
 
     <div class="row">
         <div class="col-6">
-            <label asp-for="Title">Başlık</label>
-            <input asp-for="Title" />
+            <label asp-for="Title">Başlık*</label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+
         </div>
         <div class="col-6">
-            <label asp-for="FileName">Dosya Adı</label>
-            <input asp-for="FileName" />
+            <label asp-for="FileName">Dosya Adı*</label>
+            <input asp-for="FileName" class="form-control" />
+            <span asp-validation-for="FileName" class="text-danger"></span>
+
         </div>
     </div>
 
     <div class="row">
-        <div class="col-6">
-            <label asp-for="IsArchive">Arşivli</label>
-            <select asp-for="IsArchive">
-                <option value="N">Aktif Kayıtlar</option>
-                <option value="Y">Arşivli Kayıtlar</option>
-            </select>
+        <div class="col-md-6">
+            <input type="checkbox" name="IsArchive" value=0> Aktif Kayıtlar
+            <input type="checkbox" name="IsArchive" value=1> Arşivli Kayıtlar
         </div>
-        <div class="col-6">
-            <button type="submit" class="btn btn-primary">
-                Ara
-            </button>
+        <div class="col-md-6 text-end">
+                <button type="submit" class="btn btn-primary">
+                    Ara
+                </button>
         </div>
     </div>
 </form>
 
 
-
+<br />
 
 <table class="table">
     <thead>
@@ -141,7 +138,8 @@
                 </td>
                <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Detay Gör</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detay</a> |
+                    <a asp-action="Archive" asp-route-id="@item.Id">Arşivle</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
                 </td>
             </tr>

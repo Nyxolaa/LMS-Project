@@ -24,13 +24,14 @@ namespace LMS_Project_mvc.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Search([Bind("CategoryId, MTypeId, Title, FileName")] FilterMedia filterMedia)
+        public async Task<IActionResult> Search([Bind("CategoryId, MTypeId, Title, FileName, IsArchive")] FilterMedia filterMedia)
         {
             ViewData["MediaTypeList"] = new SelectList(_context.MediaTypes, "MTypeId", "TypeName");
             ViewData["CategoryList"] = new SelectList(_context.MediaCategories, "CategoryId", "CategoryName");
             List<Media> mediaList = await _context.Medias.ToListAsync();
             List<Media> mediaListFiltered = new List<Media>();
-            
+
+
             foreach (Media media in mediaList)
             {
                 if (
@@ -38,7 +39,7 @@ namespace LMS_Project_mvc.Controllers
                     (filterMedia.FileName == null || media.FileName == filterMedia.FileName) &&
                     (filterMedia.CategoryId == null || media.CategoryId == filterMedia.CategoryId) &&
                     (filterMedia.MTypeId == null || media.MTypeId == filterMedia.MTypeId) &&
-                    (filterMedia.IsArchive == null || media.IsArchive == filterMedia.IsArchive)
+                    (filterMedia.IsArchive = false)
                     )
                 {
                     mediaListFiltered.Add(media);
@@ -56,6 +57,8 @@ namespace LMS_Project_mvc.Controllers
             FilterMedia Filter = new FilterMedia();
             ViewData["MediaTypeList"] = new SelectList(_context.MediaTypes, "MTypeId", "TypeName");
             ViewData["CategoryList"] = new SelectList(_context.MediaCategories, "CategoryId", "CategoryName");
+
+
 
             if (TempData["Medias"] != null)
             {
@@ -108,8 +111,6 @@ namespace LMS_Project_mvc.Controllers
         }
 
         // POST: Media/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,MTypeId,FileName,FileSize,FileSizeHuman,IsArchive,Time,CategoryId,Description,FilePath")] Media media, IFormFile file)
@@ -124,7 +125,7 @@ namespace LMS_Project_mvc.Controllers
                 media.FileSize = file.Length;
                 media.FileName = file.FileName;
                 media.FileSizeHuman = BytesToString(file.Length);
-                media.IsArchive = "N";
+                media.IsArchive = false;
 
                 _context.Add(media);
 
@@ -166,8 +167,6 @@ namespace LMS_Project_mvc.Controllers
         }
 
         // POST: Media/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,FileName,FileSize,Time,Description,FilePath")] Media media)
@@ -240,6 +239,48 @@ namespace LMS_Project_mvc.Controllers
         private bool MediaExists(int id)
         {
           return (_context.Medias?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+
+
+        // GET: Media/Archive/5
+        public async Task<IActionResult> Archive(int? id)
+        {
+
+
+            if (id == null || _context.Medias == null)
+            {
+                return NotFound();
+            }
+
+            var media = await _context.Medias
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (media == null)
+            {
+                return NotFound();
+            }
+
+            return View(media);
+        }
+
+        // POST: Media/Archive/5
+        [HttpPost, ActionName("Archive")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ArchiveConfirmed(int id)
+        {
+            if (_context.Medias == null)
+            {
+                return Problem("Entity set 'MediaDB.medias'  is null.");
+            }
+            var media = await _context.Medias.FindAsync(id);
+            if (media != null)
+            {
+                media.IsArchive = true;
+                _context.Update(media);
+            }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

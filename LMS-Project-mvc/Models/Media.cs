@@ -14,7 +14,7 @@ namespace LMS_Project_mvc.Models
         public int Time { get; set; }
         public string Description { get; set; }
         public string FilePath { get; set; }
-        public string IsArchive { get; set; }
+        public bool IsArchive { get; set; }
 
         public int CategoryId { get; set; } 
         public int MTypeId { get; set; } 

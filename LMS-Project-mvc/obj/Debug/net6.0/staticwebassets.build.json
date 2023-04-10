@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2cP0Mf/RH1Qd765yHaIMxRkBXMFPP3322FOmZgTgag8=",
+  "Hash": "T7hhpSdopY8vY4lDytBIJsk8j3q9TCI0FbjmNL0jDHE=",
   "Source": "LMS-Project-mvc",
   "BasePath": "_content/LMS-Project-mvc",
   "Mode": "Default",
@@ -1086,6 +1086,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\5m5h.gif"
+    },
+    {
+      "Identity": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project\\LMS-Project-mvc\\wwwroot\\uploads\\6.gif",
+      "SourceId": "LMS-Project-mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project\\LMS-Project-mvc\\wwwroot\\",
+      "BasePath": "_content/LMS-Project-mvc",
+      "RelativePath": "uploads/6.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\6.gif"
+    },
+    {
+      "Identity": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project\\LMS-Project-mvc\\wwwroot\\uploads\\Donald-Duck.mp3",
+      "SourceId": "LMS-Project-mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project\\LMS-Project-mvc\\wwwroot\\",
+      "BasePath": "_content/LMS-Project-mvc",
+      "RelativePath": "uploads/Donald-Duck.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Donald-Duck.mp3"
+    },
+    {
+      "Identity": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project\\LMS-Project-mvc\\wwwroot\\uploads\\Ghost Whistle.mp3",
+      "SourceId": "LMS-Project-mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "X:\\Fairu\\Phi-Corparate-Project\\LMS-Project\\LMS-Project-mvc\\wwwroot\\",
+      "BasePath": "_content/LMS-Project-mvc",
+      "RelativePath": "uploads/Ghost Whistle.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Ghost Whistle.mp3"
     }
   ]
 }

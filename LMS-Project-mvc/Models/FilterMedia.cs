@@ -6,6 +6,6 @@
         public int MTypeId{ get; set; }
         public string Title{ get; set; }
         public string FileName{ get; set; }
-        public string IsArchive { get; set; }
+        public bool IsArchive { get; set; }
     }
 }
